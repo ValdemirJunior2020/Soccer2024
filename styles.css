@@ -1,128 +1,121 @@
 /* Base styles */
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url('./images/SoccerFiled.jpeg') no-repeat center center fixed;
-    background-size: cover; /* Default size for larger screens */
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Navbar styling */
-  .navbar {
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  }
-  
-  .navbar .navbar-brand {
-    font-weight: bold;
-    color: #007bff; /* Bootstrap primary color */
-  }
-  
-  .navbar .navbar-brand:hover {
-    color: #0056b3; /* Darker blue on hover */
-  }
-  
-  .navbar .nav-link {
-    color: #333; /* Dark gray for links */
-  }
-  
-  .navbar .nav-link:hover {
-    color: #007bff; /* Blue on hover */
-  }
-  
-  /* Content styling */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./images/SoccerFiled.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%; /* Full width */
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Stick navbar at the top */
+  top: 0;
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.navbar .navbar-brand:hover {
+  color: #0056b3;
+}
+
+.navbar .nav-link {
+  color: #333;
+}
+
+.navbar .nav-link:hover {
+  color: #007bff;
+}
+
+/* Content styling */
+.content {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+  border-radius: 10px;
+  max-width: 90%; /* Restrict width for mobile devices */
+  max-height: 70vh; /* Restrict height to prevent overflow */
+  overflow-y: auto; /* Add scroll for overflowing content */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  margin: auto; /* Ensure it is centered */
+  position: relative;
+  z-index: 1; /* Stay above background */
+}
+
+/* Heading and paragraph adjustments */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 5px 0; /* Reduce spacing between paragraphs */
+}
+
+/* Footer styling */
+footer {
+  background-color: #28a745; /* Green background */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%; /* Full width */
+  position: fixed; /* Stick footer to the bottom */
+  bottom: 0;
+  z-index: 10;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
   .content {
-    text-align: center;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 10px;
-    margin-top: 70px; /* Space below the navbar */
+    padding: 10px;
+    max-width: 90%;
+    max-height: 75vh; /* Reduce height for tablets */
   }
-  
+
   h1 {
-    font-size: 2.5rem; /* Default heading size */
+    font-size: 1.8rem;
   }
-  
+
   p {
-    font-size: 1.2rem; /* Default paragraph size */
-  }
-  
-  /* Footer styling */
-  footer {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background */
-    color: #333; /* Dark gray text */
-    padding: 10px 0;
-    text-align: center;
     font-size: 0.9rem;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top of the footer */
   }
-  
-  /* Media query for tablets and small screens */
-  @media (max-width: 768px) {
-    body {
-      background-size: contain; /* Fit the image for smaller screens */
-    }}
-  
-    .content {
-      text-align: center;
-      color: white;
-      text-shadow: 2px 2px 5px black;
-      padding: 15px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      margin: 70px auto 20px auto;
-      max-width: 800px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    
-    h1 {
-      font-size: 2.5rem;
-    }
-    
-    p {
-      font-size: 1.2rem;
-      line-height: 1.5; /* Adjust line spacing for better readability */
-    }
-    
-    
-  
-  /* Media query for mobile phones */
-  @media (max-width: 480px) {
-    body {
-      background-size: 120%; /* Slight zoom for mobile */
-    }
-  
-    .content {
-      padding: 10px;
-      font-size: 0.8rem;
-    }
-  
-    h1 {
-      font-size: 1.5rem; /* Adjust heading size */
-    }
-  
-    p {
-      font-size: 0.9rem; /* Adjust paragraph size */
-    }
-  
-    footer {
-      background-color: #28a745; /* Green background */
-      color: white; /* White text */
-      padding: 10px 0;
-      text-align: center;
-      font-size: 0.9rem;
-      width: 100%; /* Full width */
-      position: relative;
-      bottom: 0;
-      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
-    }
-    
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 480px) {
+  .content {
+    padding: 10px;
+    max-width: 85%; /* Slightly narrower content */
+    max-height: 65vh; /* Further reduce height */
+    margin: auto;
   }
-  
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.85rem; /* Smaller text for readability */
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
