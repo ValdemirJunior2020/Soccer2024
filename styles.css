@@ -1,0 +1,110 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/SoccerFiled.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Default size for larger screens */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  .navbar .navbar-brand {
+    font-weight: bold;
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  .navbar .navbar-brand:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .navbar .nav-link {
+    color: #333; /* Dark gray for links */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #007bff; /* Blue on hover */
+  }
+  
+  /* Content styling */
+  .content {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    margin-top: 70px; /* Space below the navbar */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Default heading size */
+  }
+  
+  p {
+    font-size: 1.2rem; /* Default paragraph size */
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    color: #333; /* Dark gray text */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top of the footer */
+  }
+  
+  /* Media query for tablets and small screens */
+  @media (max-width: 768px) {
+    body {
+      background-size: contain; /* Fit the image for smaller screens */
+    }
+  
+    .content {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    h1 {
+      font-size: 2rem; /* Smaller heading size */
+    }
+  
+    p {
+      font-size: 1rem; /* Smaller paragraph size */
+    }
+  }
+  
+  /* Media query for mobile phones */
+  @media (max-width: 480px) {
+    body {
+      background-size: 120%; /* Slight zoom for mobile */
+    }
+  
+    .content {
+      padding: 10px;
+      font-size: 0.8rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Adjust heading size */
+    }
+  
+    p {
+      font-size: 0.9rem; /* Adjust paragraph size */
+    }
+  
+    footer {
+      font-size: 0.8rem; /* Smaller footer text */
+    }
+  }
+  
