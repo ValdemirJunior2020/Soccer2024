@@ -68,21 +68,30 @@ body {
   @media (max-width: 768px) {
     body {
       background-size: contain; /* Fit the image for smaller screens */
-    }
+    }}
   
     .content {
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
       padding: 15px;
-      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      margin: 70px auto 20px auto;
+      max-width: 800px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-  
+    
     h1 {
-      font-size: 2rem; /* Smaller heading size */
+      font-size: 2.5rem;
     }
-  
+    
     p {
-      font-size: 1rem; /* Smaller paragraph size */
+      font-size: 1.2rem;
+      line-height: 1.5; /* Adjust line spacing for better readability */
     }
-  }
+    
+    
   
   /* Media query for mobile phones */
   @media (max-width: 480px) {
@@ -104,7 +113,16 @@ body {
     }
   
     footer {
-      font-size: 0.8rem; /* Smaller footer text */
+      background-color: #28a745; /* Green background */
+      color: white; /* White text */
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      width: 100%; /* Full width */
+      position: relative;
+      bottom: 0;
+      box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
     }
+    
   }
   
