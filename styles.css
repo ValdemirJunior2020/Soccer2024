@@ -4,6 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url('./images/SoccerFiled.jpeg') no-repeat center center fixed;
@@ -14,8 +15,9 @@ body {
 /* Navbar styling */
 .navbar {
   width: 100%; /* Full width */
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #28a745 !important; /* Force green background */
+  color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   position: fixed; /* Stick navbar at the top */
   top: 0;
   z-index: 10; /* Ensure it stays above other content */
@@ -23,19 +25,19 @@ body {
 
 .navbar .navbar-brand {
   font-weight: bold;
-  color: #007bff;
+  color: white !important; /* Ensure text is white */
 }
 
 .navbar .navbar-brand:hover {
-  color: #0056b3;
+  color: #e2e2e2 !important; /* Light gray on hover */
 }
 
 .navbar .nav-link {
-  color: #333;
+  color: white !important; /* Ensure links are white */
 }
 
 .navbar .nav-link:hover {
-  color: #007bff;
+  color: #e2e2e2 !important; /* Light gray on hover */
 }
 
 /* Content styling */
@@ -78,14 +80,33 @@ footer {
   position: fixed; /* Stick footer to the bottom */
   bottom: 0;
   z-index: 10;
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Footer responsive adjustments */
+@media (max-width: 480px) {
+  footer {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 5px 0; /* Reduce vertical padding */
+    text-align: center;
+    font-size: 0.8rem; /* Slightly smaller text size */
+    width: 100%; /* Full width */
+    position: fixed; /* Stick footer to the bottom */
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  }
+  
+  
+  
 }
 
 /* Responsive adjustments for tablets */
 @media (max-width: 768px) {
   .content {
     padding: 10px;
-    max-width: 90%;
+    max-width: 90%; /* Adjust width for smaller screens */
     max-height: 75vh; /* Reduce height for tablets */
   }
 
@@ -113,9 +134,5 @@ footer {
 
   p {
     font-size: 0.85rem; /* Smaller text for readability */
-  }
-
-  footer {
-    font-size: 0.8rem;
   }
 }
