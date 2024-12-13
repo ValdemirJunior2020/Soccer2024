@@ -43,8 +43,8 @@ body {
 /* Content styling */
 .content {
   text-align: center;
-  color: white;
-  text-shadow: 2px 2px 5px black;
+  color: rgb(245, 242, 242);
+  
   padding: 15px;
   background: rgba(0, 0, 0, 0.7); /* Slightly darker background */
   border-radius: 10px;
